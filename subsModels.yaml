@@ -1,0 +1,26 @@
+models:
+  Models/Company:
+    name: string:40
+    last_name: string:40
+    site_url: string
+    company_name: string
+    email: string
+    password: string
+    api_key: string
+    canceled_at: nullable timestamp
+  Models/Package:
+    name: string:40
+    type: enum:monthly,yearly
+    price: float
+  Models/CompanyPackage:
+    package_id: foreign:packages
+    company_id: foreign:companies
+    start_date: nullable timestamp
+    end_date: nullable timestamp
+    status: enum:active,passive
+  Models/CompanyPayment:
+    company_id: foreign:companies
+    price: float
+    status: enum:success,fail
+
+

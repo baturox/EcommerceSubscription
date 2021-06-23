@@ -1,0 +1,18 @@
+created:
+    - database/factories/Models/CompanyFactory.php
+    - database/factories/Models/PackageFactory.php
+    - database/factories/Models/CompanyPackageFactory.php
+    - database/factories/Models/CompanyPaymentFactory.php
+    - database/migrations/2021_06_23_122108_create_companies_table.php
+    - database/migrations/2021_06_23_122109_create_packages_table.php
+    - database/migrations/2021_06_23_122110_create_company_packages_table.php
+    - database/migrations/2021_06_23_122111_create_company_payments_table.php
+    - app/Models/Company.php
+    - app/Models/Package.php
+    - app/Models/CompanyPackage.php
+    - app/Models/CompanyPayment.php
+models:
+    Models/Company: { name: 'string:40', last_name: 'string:40', site_url: 'string:40', company_name: 'string:40', email: string, password: string, author_id: 'id:user', api_key: 'id:user', canceled_at: 'nullable timestamp' }
+    Models/Package: { name: 'string:40', type: 'enum:monthly,yearly', price: float }
+    Models/CompanyPackage: { package_id: 'foreign:packages', company_id: 'foreign:companies', start_date: 'nullable timestamp', end_date: 'nullable timestamp', status: 'enum:active,passive' }
+    Models/CompanyPayment: { company_id: 'foreign:companies', price: float, status: 'enum:success,fail' }
