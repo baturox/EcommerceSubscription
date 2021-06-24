@@ -41,7 +41,7 @@ class CompanyPaymentJob implements ShouldQueue
 
         $getLastFailedPayment = $company->payments()
             ->whereDate('created_at', Carbon::today())
-            ->where('status', 'fail')->exists();
+            ->exists();
         if (!$getLastFailedPayment) {
             $makePayment = new CompanyPayment();
             $makePayment->company_id = $company->id;
