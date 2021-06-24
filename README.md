@@ -9,3 +9,12 @@ Api Document Url
 ```sh
 https://documenter.getpostman.com/view/4563913/TzecCQp8
 ```
+
+Setup Callbak Url
+
+```sh
+https://webhook.site/
+get url from this site
+add env file
+APP_CALLBACK_URL=https://webhook.site/{newToken}
+```
