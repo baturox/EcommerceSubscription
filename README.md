@@ -10,7 +10,7 @@ Api Document Url
 https://documenter.getpostman.com/view/4563913/TzecCQp8
 ```
 
-Setup Callbak Url
+Setup Callback Url
 
 ```sh
 https://webhook.site/
